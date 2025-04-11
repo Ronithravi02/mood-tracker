@@ -1,4 +1,4 @@
-const apiUrl = "https://4ytjbozp47.execute-api.us-east-1.amazonaws.com/mood"; // <- change this
+const apiUrl = "https://4ytjbozp47.execute-api.us-east-1.amazonaws.com/mood";
 
 document.querySelectorAll('.emoji').forEach(emoji => {
   emoji.addEventListener('click', async () => {
