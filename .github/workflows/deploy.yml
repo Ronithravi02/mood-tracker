@@ -19,5 +19,18 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Sync to S3
-        run: aws s3 sync . s3://mood-tracker-app --delete --exclude ".github/*"
+      - name: Upload HTML file with correct content-type
+        run: |
+          aws s3 cp index.html s3://mood-tracker-app/ --content-type "text/html; charset=utf-8"
+
+      - name: Upload JS file with correct content-type
+        run: |
+          aws s3 cp script.js s3://mood-tracker-app/ --content-type "application/javascript; charset=utf-8"
+
+      - name: Upload CSS file with correct content-type
+        run: |
+          aws s3 cp style.css s3://mood-tracker-app/ --content-type "text/css; charset=utf-8"
+
+      - name: Upload all other assets
+        run: |
+          aws s3 sync . s3://mood-tracker-app --delete --exclude ".git/*" --exclude ".github/*" --exclude "index.html" --exclude "script.js" --exclude "style.css"
