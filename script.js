@@ -1,4 +1,4 @@
-const apiUrl = "https://4ytjbozp47.execute-api.us-east-1.amazonaws.com/mood";
+const apiUrl = "https://jsonplaceholder.typicode.com/posts"; // Mock API
 
 document.querySelectorAll('.emoji').forEach(emoji => {
   emoji.addEventListener('click', async () => {
@@ -14,7 +14,8 @@ document.querySelectorAll('.emoji').forEach(emoji => {
       });
 
       const data = await res.json();
-      alert("Mood saved successfully!");
+      console.log("Response from mock API:", data);
+      alert("Mood saved successfully (mock)!");
     } catch (err) {
       console.error("Error saving mood:", err);
       alert("Failed to save mood.");
