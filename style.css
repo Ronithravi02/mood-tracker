@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f5f5f5;
+}
+
+.moods span {
+  font-size: 3rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.moods span:hover {
+  transform: scale(1.2);
+}
