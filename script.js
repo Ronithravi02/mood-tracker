@@ -15,7 +15,7 @@ document.querySelectorAll('.emoji').forEach(emoji => {
 
       const data = await res.json();
       console.log("Response from mock API:", data);
-      alert("Mood saved successfully (mock)!");
+      alert("Mood saved successfully!");
     } catch (err) {
       console.error("Error saving mood:", err);
       alert("Failed to save mood.");
