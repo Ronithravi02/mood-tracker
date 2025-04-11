@@ -1,4 +1,4 @@
-const apiUrl = "https://jsonplaceholder.typicode.com/posts"; // Mock API
+const apiUrl = "https://4ytjbozp47.execute-api.us-east-1.amazonaws.com/mood"; // Mock API
 
 document.querySelectorAll('.emoji').forEach(emoji => {
   emoji.addEventListener('click', async () => {
